@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+}
+
+.container{
+        background: url("Layout_1.png") center;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        height: 1000px;
+        width: 100%;
+    }
+
+.tenfold_btn{
+    position: fixed;
+    bottom: 72px;
+    right: 73px;
+    /* btn: */
+    background: #00A1E0;
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.20), 0px 0px 0px 7px rgba(0,0,0,0.05);
+    border-radius: 100px;
+    height: 70px;
+    width: 70px;
+}
+
+.tenfold_btn svg {
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.popup-bg{
+    /* popup-bg: */
+    background: #FFFFFF;
+    box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.20), 0px 0px 0px 7px rgba(0,0,0,0.05);
+    border-radius: 5px;
+    /* top: */
+    background: #F9F9F9;
+    /* bottom: */
+    background: #EBEFF2;
+    width: 599px;
+    height: 409px;
+    position: fixed;
+    bottom: 69px;
+    right: 56px;
+}
+
