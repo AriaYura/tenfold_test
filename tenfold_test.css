@@ -172,6 +172,7 @@ body{
     background: #00D95A;
     border-radius: 4px;
     display: block;
+    margin-left: 68px;
 }
 
 .popup-call-info-incall p{
@@ -250,7 +251,8 @@ body{
     height: 89px;
     border: 1px solid #CCCCCC;
     border-radius: 100px;
-    background: #FFFFFF;
+    background-image: url(photo.png);
+    background-position: center;
     z-index: 1;
 }
 
@@ -282,6 +284,7 @@ body{
 .popup-fields-text a{
     font-family: Helvetica;
     font-size: 13px;
+    font-weight: 300;
     color: #AAAAAA;
     margin: 0;
     padding: 0;
@@ -408,42 +411,138 @@ body{
     right: 91px;
     width: 139px;
     height: 40px;
-    display: inline-block;
 }
 
 .popup-history-dispositions-followup{
+    position: fixed;
+    bottom: 241px;
+    right: 184px;
     width: auto;
     height: auto;
-    display: inline-block;
 }
 
 .popup-history-dispositions-followup svg{
     text-align: center;
 }
 
+.popup-history-dispositions-followup-text{
+    position: fixed;
+    bottom: 223px;
+    right: 161px;
+}
+
+.popup-history-dispositions-followup-text a{
+    font-family: TitilliumWeb-Light;
+    font-size: 14px;
+    color: #00A1E0;
+    margin: 0;
+    padding: 0;
+}
+
 .popup-history-dispositions-notes{
-    width: 19px;
-    height: 20px;
-    display: inline-block;
+    position: fixed;
+    bottom: 239px;
+    right: 103px;
+    width: auto;
+    height: auto;
 }
 
 .popup-history-dispositions-notes svg{
     text-align: center;
 }
 
-.popup-history-text{
+.popup-history-dispositions-notes-text{
+    position: fixed;
+    bottom: 223px;
+    right: 91px;
+}
+
+.popup-history-dispositions-notes-text a{
+    font-family: TitilliumWeb-Light;
+    font-size: 14px;
+    color: #00A1E0;
+    margin: 0;
+    padding: 0;
+}
+
+.popup-show-more{
+    position: fixed;
+    bottom: 175px;
+    right: 211px;
+    width: 280px;
+    height: 30px;
+    background: #EBEFF2;
+    border-radius: 100px;
+}
+
+.popup-show-more p{
+    font-family: "Helvetica Neue";
+    font-size: 12px;
+    font-weight: 200;
+    color: #666666;
+    line-height: 13px;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.popup-notes{
+    position: fixed;
+    bottom: 94px;
+    right: 78px;
+    width: 554px;
+    height: 73px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.05);
+    border-radius: 4px;
+}
+
+.popup-notes-text{
+    position: fixed;
+    bottom: 109px;
+    right: 183px;
+    width: 424px;
+    height: 44px;
+}
+
+.popup-notes-text p{
     font-family: TitilliumWeb-Light;
     font-size: 14px;
     color: #666666;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
 }
 
-
-
-.popup-fields-link{
-    font-family: Helvetica-Regular;
-    font-size: 13px;
-    color:#AAAAAA;
+.popup-notes-text a{
+    font-family: TitilliumWeb-Light;
+    font-size: 14px;
+    color: #00A1E0;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
 }
 
+.popup-notes-save{
+    position: fixed;
+    bottom: 106px;
+    right: 91px;
+    width: 75px;
+    height: 49px;
+    background: #00A1E0;
+    border-radius: 4px;
+    border-color: transparent;
+    vertical-align: middle;
+}
 
-
+.popup-notes-save p{
+    font-family: "Helvetica Neue";
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+    padding: 0;
+}
