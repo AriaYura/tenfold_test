@@ -21,6 +21,7 @@ body{
     /* btn: */
     background: #00A1E0;
     box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.20), 0px 0px 0px 7px rgba(0,0,0,0.05);
+    border-color: transparent;
     border-radius: 100px;
     height: 70px;
     width: 70px;
@@ -30,7 +31,7 @@ body{
     display: block;
     margin: auto;
     text-align: center;
-    padding: 20px 0;
+    vertical-align: middle;
 }
 
 .popup-bg{
@@ -38,33 +39,34 @@ body{
     background: #FFFFFF;
     box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.20), 0px 0px 0px 7px rgba(0,0,0,0.05);
     border-radius: 5px;
-    /* top: */
-    background: #F9F9F9;
-    /* bottom: */
-    background: #EBEFF2;
     width: 599px;
     height: 409px;
     position: fixed;
     bottom: 69px;
     right: 56px;
+    display: none;
 }
 
 .popup-bg-top{
     position: fixed;
     bottom: 347px;
-    right: 28px;
+    right: 56px;
+    border-radius: 5px 5px 0 0;
     background: #F9F9F9;
-    width: 634px;
-    height: 141px;
+    width: 598.6px;
+    height: 131px;
+    z-index: -1;
 }
 
 .popup-bg-bottom{
     position: fixed;
-    bottom: 62px;
+    bottom: 69px;
     right: 56.4px;
+    border-radius: 0 0 5px 5px;
     background: #EBEFF2;
     width: 598.6px;
-    height: 127px;
+    height: 119px;
+    z-index: -1;
 }
 
 .popup-logo{
@@ -75,20 +77,43 @@ body{
     height: 10px;
 }
 
-.popup-back{
+.popup-close{
     position: fixed;
-    bottom:407px;
-    right: 479px;
-    width: 143px;
+    bottom: 449px;
+    right: 70px;
+    height: auto;
+    width: auto;
+    border-color: transparent;
+    background-color: transparent;
+    padding: 0;
+}
+
+.popup-close svg{
+    text-align: center;
+}
+
+#popup-firstrow{
+    position: fixed;
+    bottom: 405px;
+    right: 86px;
+    width: 540px;
+    display: inline-block;
+}
+
+.popup-back{
+    width: auto;
     height: 39px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .popup-back-icon{
-    position: fixed;
     bottom: 407.13px;
     right: 583.13px;
     width: 38.87px;
     height: 38.87px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .popup-back-icon svg{
@@ -99,23 +124,26 @@ body{
     font-family: TitilliumWeb-Light;
     font-size: 14px;
     color: #666666;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 11px;
 }
 
 
 .popup-call-info{
-    position: fixed;
-    bottom: 405px;
-    right: 86px;
-    width: 332px;
+    width: auto;
     height: 43px;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    padding-top: 5px;
 }
 
 .popup-call-info-phone-icon{
-    position: fixed;
-    bottom: 407.13px;
-    right: 86.13px;
     width: 38.87px;
     height: 38.87px;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .popup-call-info-phone-icon svg{
@@ -123,47 +151,95 @@ body{
 }
 
 .popup-call-info-time{
-    position: fixed;
-    bottom: 414px;
-    right: 136px;
     font-family: TitilliumWeb-Thin;
     font-size: 42px;
     color: #666666;
     letter-spacing: -1.75px;
     line-height: 32px;
-    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.popup-call-info-calls{
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .popup-call-info-incall{
-    position: fixed;
-    bottom: 428px;
-    right: 292px;
     width: 59px;
     height: 20px;
     background: #00D95A;
     border-radius: 4px;
+    display: block;
+}
+
+.popup-call-info-incall p{
+    font-family: HelveticaNeue-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
 }
 
 .popup-call-info-outcall{
-    position: fixed;
-    bottom: 405px;
-    right: 291px;
     width: 127px;
     height: 20px;
     background: #CCCCCC;
     border-radius: 4px;
+    display: block;
 }
 
-.popup-phone{
-    font-family: TitilliumWeb-Light;
-    font-size: 22px;
-    color: #00A1E0;
+.popup-call-info-outcall p{
+    font-family: HelveticaNeue-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.popup-name-status{
+    position: fixed;
+    bottom: 367px;
+    right: 493px;
+    height: 14px;
+    width: 10px;
+}
+
+.popup-name-status svg{
+    text-align: center;
 }
 
 .popup-name{
+    position: fixed;
+    bottom: 356px;
+    right: 345px;
+}
+
+.popup-name p{
     font-family: TitilliumWeb-Light;
     font-size: 22px;
     color: #666666;
+    margin: 0;
+    padding: 0;
+}
+
+.popup-phone{
+    position: fixed;
+    bottom:359px;
+    right: 87px;
+}
+
+.popup-phone a{
+    font-family: TitilliumWeb-Light;
+    font-size: 22px;
+    color: #00A1E0;
+    margin: 0;
+    padding: 0;
 }
 
 .popup-photo{
@@ -186,22 +262,42 @@ body{
     height: 37px;
 }
 
+.popup-fields-text{
+    position: fixed;
+    bottom: 303px;
+    width: auto;
+    height: 37px;
+    margin-left: 6px;
+    display: inline-block;
+}
+
+.popup-fields-text p{
+    font-family: TitilliumWeb-Light;
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+}
+
+.popup-fields-text a{
+    font-family: Helvetica;
+    font-size: 13px;
+    color: #AAAAAA;
+    margin: 0;
+    padding: 0;
+}
+
 .popup-fields-icon{
     position: fixed;
     bottom: 325px;
     right: 496px;
     width: 8px;
     height: 8px;
+    display: inline-block;
 }
 
 .popup-fields-icon svg{
     text-align: center;
-}
-
-.popup-fields p{
-    font-family: TitilliumWeb-Light;
-    font-size: 14px;
-    color: #666666;
 }
 
 .popup-history{
@@ -242,6 +338,16 @@ body{
     border-radius: 4px;
 }
 
+.popup-history-log-calltype p{
+    font-family: HelveticaNeue-Bold;
+    font-size: 14px;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+}
+
 .popup-history-log-timeicon{
     position: fixed;
     bottom: 226.1px;
@@ -250,24 +356,46 @@ body{
     height: 14.9px
 }
 
+.popup-history-log-time{
+    position: fixed;
+    bottom: 223px;
+    right: 427px;
+}
+
+.popup-history-log-time p{
+    font-family: TitilliumWeb-Light;
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+}
+
 .popup-history-log-timeicon svg{
     text-align: center;
 }
 
 .popup-history-call-history{
     position: fixed;
-    bottom: 277px;
+    bottom: 270px;
     right: 90px;
     width: 108px;
     height: 21px;
+    display: inline-block;
+}
+
+.popup-history-call-history p{
+    font-family: TitilliumWeb-Light;
+    font-size: 14px;
+    color: #666666;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .popup-history-call-history-icon{
-    position: fixed;
-    bottom: 284px;
-    right: 90px;
     width: 9px;
     height: 6px;
+    display: inline-block;
 }
 
 .popup-history-call-history-icon svg{
@@ -280,14 +408,13 @@ body{
     right: 91px;
     width: 139px;
     height: 40px;
+    display: inline-block;
 }
 
 .popup-history-dispositions-followup{
-    position: fixed;
-    bottom: 247px;
-    right: 184px;
-    width: 18px;
-    height: 18px;
+    width: auto;
+    height: auto;
+    display: inline-block;
 }
 
 .popup-history-dispositions-followup svg{
@@ -295,11 +422,9 @@ body{
 }
 
 .popup-history-dispositions-notes{
-    position: fixed;
-    bottom: 245px;
-    right: 103px;
     width: 19px;
     height: 20px;
+    display: inline-block;
 }
 
 .popup-history-dispositions-notes svg{

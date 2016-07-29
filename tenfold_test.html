@@ -3,13 +3,14 @@
 <head>
 <!-- Custom styles for this template -->
 <link href="tenfold_test.css" rel="stylesheet">
+<script src="tenfold_test.js"></script>
 
 </head>
 <body>
 
     <div class="container">
        
-       <div class="tenfold_btn">
+       <button class="tenfold_btn" onclick="popup_show()">
            <svg width="30px" height="30px" viewBox="1317 730 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <!-- Generator: Sketch 39 (31667) - http://www.bohemiancoding.com/sketch -->
             <desc>Created with Sketch.</desc>
@@ -27,9 +28,12 @@
         <polygon id="Fill-19" fill="#FFFFFF" points="16.3650417 27.3030417 3.85420833 27.3030417 3.85420833 24.3034583 13.3650417 24.3034583 13.3650417 13.3655417 24.303375 13.3655417 24.303375 3.853875 27.303375 3.853875 27.303375 16.365125 16.3650417 16.365125"></polygon>
     </g>
            </svg>
-       </div>
+       </button>
         
-        <div class="popup-bg">
+        <div id="tfd_popup" class="popup-bg">
+            <div class="popup-bg-top"></div>
+            <div class="popup-bg-bottom"></div>
+            
             <div class="popup-logo">
                 <svg width="54px" height="11px" viewBox="797 383 54 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -63,21 +67,74 @@
     </g>
 </svg>
             </div>
+            <button class="popup-close" onclick="popup_hide()">
+                <svg width="16px" height="17px" viewBox="1354 386 16 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="close-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(1354.000000, 387.000000)">
+        <path d="M15.686,7.8429 C15.686,12.1749 12.175,15.6859 7.843,15.6859 C3.512,15.6859 0,12.1749 0,7.8429 C0,3.5109 3.512,-0.0001 7.843,-0.0001 C12.175,-0.0001 15.686,3.5109 15.686,7.8429" id="Page-1" fill="#00A1E0"></path>
+        <path d="M11.7215887,10.7040778 L9.0412507,8.06096667 L11.7348845,5.40485556 C12.0208563,5.12285556 11.9831099,4.62418889 11.697138,4.34218889 C11.4111662,4.06018889 10.9053634,4.02285556 10.6193915,4.30485556 L7.92587042,6.96107778 L5.29871549,4.37041111 C5.01533521,4.09096667 4.51640563,4.0483 4.22908169,4.32196667 C3.95133521,4.60552222 3.97950423,5.1123 4.26288451,5.39174444 L6.89003944,7.98241111 L4.19651831,10.6386333 C3.91054648,10.9206333 3.94829296,11.4193 4.23426479,11.7013 C4.52023662,11.9833 5.02603944,12.0205222 5.31201127,11.7385222 L8.00553239,9.08241111 L10.6858704,11.7254111 C10.9704901,12.0061889 11.4352789,11.9813 11.7215887,11.7029667 C12.0038423,11.4207444 12.0063211,10.9848556 11.7215887,10.7040778" id="Fill-3" fill="#FFFFFF"></path>
+    </g>
+</svg>
+            </button>
             
-            <div class="popup-back">
-                <div class="popup-back-icon">
-                    <svg width="41px" height="41px" viewBox="-1 -1 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div id="popup-firstrow">
+                <div class="popup-back">
+                    <div class="popup-back-icon">
+                        <svg width="41px" height="41px" viewBox="-1 -1 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <path d="M27.1640084,15.1703257 L19.4503158,22.883563 L11.7366232,15.1703257 C11.5622227,14.9959253 11.2803588,14.9959253 11.1059583,15.1703257 C10.9315578,15.3447262 10.9315578,15.6270456 11.1059583,15.801446 L19.135211,23.8302434 C19.2221836,23.917216 19.3364774,23.9604746 19.4503158,23.9604746 C19.5641543,23.9604746 19.6784481,23.917216 19.7654206,23.8302434 L27.7946734,15.801446 C27.9690739,15.6270456 27.9690739,15.3447262 27.7946734,15.1703257 C27.6202729,14.9959253 27.3379536,14.9959253 27.1640084,15.1703257" id="Fill-5" stroke="none" fill="#CCCCCC" fill-rule="evenodd" transform="translate(19.450316, 19.500000) rotate(-270.000000) translate(-19.450316, -19.500000) "></path>
     <path d="M19.4338766,38.8677531 C30.1669102,38.8677531 38.8677531,30.1669102 38.8677531,19.4338766 C38.8677531,8.70084291 30.1669102,0 19.4338766,0 C8.70084291,0 0,8.70084291 0,19.4338766 C0,30.1669102 8.70084291,38.8677531 19.4338766,38.8677531 Z" id="Oval-1" stroke="#CCCCCC" stroke-width="1" fill="none"></path>
 </svg>
+                    </div>
+                    <p>CALLS HISTORY</p>
                 </div>
-                <p>CALL HISTORY</p>
-            </div>
+                <div class="popup-call-info">
+                    <div class="popup-call-info-calls">
+                        <div class="popup-call-info-incall">
+                            <p>IN CALL</p>
+                        </div>
+                        <div class="popup-call-info-outcall">
+                            <p>OUTBOUND CALL</p>
+                        </div>
+                    </div>
+                
+                    <p class="popup-call-info-time">00:03:57</p>
+                
+                    <div class="popup-call-info-phone-icon">
+                        <svg width="41px" height="41px" viewBox="292 1 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <path d="M312.433877,40.8677531 C323.16691,40.8677531 331.867753,32.1669102 331.867753,21.4338766 C331.867753,10.7008429 323.16691,2 312.433877,2 C301.700843,2 293,10.7008429 293,21.4338766 C293,32.1669102 301.700843,40.8677531 312.433877,40.8677531 Z" id="Oval-1" stroke="#CCCCCC" stroke-width="1" fill="none"></path>
+    <path d="M316.405278,30.8670045 L316.259969,30.8123023 C316.228887,30.8004105 316.186925,30.7821764 316.113882,30.7449155 C310.204372,27.1861 306.184661,21.3060076 305.074249,14.6291655 C305.062593,14.53086 305.067255,14.4729867 305.067255,14.4301762 L305.067255,14.2589345 L308.670463,12.9984051 L310.029534,16.7276695 L308.752831,17.5616802 C308.319234,17.8470831 308.15139,18.3790424 308.335552,18.8872181 C309.350387,21.6469055 311.073897,24.1584509 313.321143,26.1515145 C313.709671,26.4924124 314.283138,26.5312589 314.717513,26.2474416 L315.987999,25.4213587 L318.972671,28.0906686 L316.405278,30.8670045 Z M319.630837,27.2717208 L316.74252,24.7126082 L316.741743,24.7126082 C316.353215,24.369332 315.77664,24.3296927 315.343043,24.6143028 L314.077219,25.4435567 L313.944342,25.3246389 C311.905347,23.5044027 310.318599,21.1855041 309.35505,18.6184637 L309.286669,18.436123 L310.565703,17.5989411 C310.993861,17.3167094 311.172584,16.7902996 311.000077,16.3177993 L309.68219,12.7312362 C309.580396,12.4553468 309.374476,12.2341595 309.102507,12.1073138 C308.827429,11.9812609 308.517383,11.9646124 308.227542,12.0660889 L304.674842,13.3147266 C304.43784,13.405897 303.896232,13.7230113 304.017452,14.7306421 C305.177597,21.7364903 309.399342,27.8956433 315.618898,31.6367995 C315.794512,31.7247987 315.983337,31.7913928 316.149627,31.823897 C316.244428,31.842131 316.335343,31.8524373 316.42315,31.8524373 C316.720763,31.8524373 316.9803,31.74224 317.215748,31.5139177 L319.708543,28.818446 C319.910578,28.6012226 320.013149,28.3213692 319.998385,28.0312096 C319.982844,27.7394645 319.853075,27.4699173 319.630837,27.2717208 L319.630837,27.2717208 Z" id="Fill-1" stroke="none" fill="#CCCCCC" fill-rule="evenodd"></path>
+</svg>
+                    </div>
+                
+                </div>
+            </div>    
             
             <div class="popup-photo"></div>
+            
+            <div class="popup-name-status">
+                <svg width="10px" height="10px" viewBox="0 13 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <path d="M5,23 C7.76142375,23 10,20.7614237 10,18 C10,15.2385763 7.76142375,13 5,13 C2.23857625,13 0,15.2385763 0,18 C0,20.7614237 2.23857625,23 5,23 Z" id="Oval-3" stroke="none" fill="#00D95A" fill-rule="evenodd"></path>
+</svg>
+            </div>
+            
+            <div class="popup-name">
+                <p>Shirley Thomas</p>
+            </div>
+            
+            <div class="popup-phone">
+                <a href="#">+1 (234) 123 123</a>
+            </div>
             
             <div class="popup-history">
                 <div class="popup-history-icon"> 
@@ -96,7 +153,9 @@
 </svg>
                 </div>
                 <div class="popup-history-log">
-                    <div class="popup-history-log-calltype"></div>
+                    <div class="popup-history-log-calltype">
+                        <p>OUTBOUND CALL</p>
+                    </div>
                     <div class="popup-history-log-timeicon">    
                         <svg width="15px" height="15px" viewBox="1 26 15 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -106,9 +165,13 @@
     <path d="M8.76458163,33.2838776 L10.050602,33.2838776 C10.4562143,33.2838776 10.8618265,33.2802041 11.2674388,33.285102 C11.6761122,33.29 11.9761122,33.5713265 11.9782551,33.9417347 C11.9800918,34.3145918 11.6877449,34.6026531 11.2750918,34.605102 C10.2266224,34.6115306 9.17784694,34.6121429 8.12937755,34.6044898 C7.71733673,34.6014286 7.44060204,34.3243878 7.43937755,33.9328571 C7.43631633,32.7692857 7.43386735,31.6060204 7.43937755,30.4427551 C7.44152041,29.949898 7.85907143,29.6358163 8.30478571,29.7757143 C8.59162245,29.8657143 8.76335714,30.1204082 8.76396939,30.467551 C8.7655,31.34 8.76458163,32.2127551 8.76458163,33.0852041 L8.76458163,33.2838776" id="Fill-3" stroke="none" fill="#CCCCCC" fill-rule="evenodd"></path>
 </svg>
                     </div>
+                    <div class="popup-history-log-time">
+                        <p>4 DAYS AGO</p>
+                    </div>
                 </div>
                 
                 <div class="popup-history-call-history">
+                    <p>CALLS HISTORY</p>
                     <div class="popup-history-call-history-icon">
                         <svg width="9px" height="6px" viewBox="99 8 9 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -148,24 +211,6 @@
                 </div>
             </div>
             
-            <div class="popup-call-info">
-                <div class="popup-call-info-incall"></div>
-                <div class="popup-call-info-outcall"></div>
-                
-                <p class="popup-call-info-time">00:03:57</p>
-                
-                <div class="popup-call-info-phone-icon">
-                    <svg width="41px" height="41px" viewBox="292 1 41 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <path d="M312.433877,40.8677531 C323.16691,40.8677531 331.867753,32.1669102 331.867753,21.4338766 C331.867753,10.7008429 323.16691,2 312.433877,2 C301.700843,2 293,10.7008429 293,21.4338766 C293,32.1669102 301.700843,40.8677531 312.433877,40.8677531 Z" id="Oval-1" stroke="#CCCCCC" stroke-width="1" fill="none"></path>
-    <path d="M316.405278,30.8670045 L316.259969,30.8123023 C316.228887,30.8004105 316.186925,30.7821764 316.113882,30.7449155 C310.204372,27.1861 306.184661,21.3060076 305.074249,14.6291655 C305.062593,14.53086 305.067255,14.4729867 305.067255,14.4301762 L305.067255,14.2589345 L308.670463,12.9984051 L310.029534,16.7276695 L308.752831,17.5616802 C308.319234,17.8470831 308.15139,18.3790424 308.335552,18.8872181 C309.350387,21.6469055 311.073897,24.1584509 313.321143,26.1515145 C313.709671,26.4924124 314.283138,26.5312589 314.717513,26.2474416 L315.987999,25.4213587 L318.972671,28.0906686 L316.405278,30.8670045 Z M319.630837,27.2717208 L316.74252,24.7126082 L316.741743,24.7126082 C316.353215,24.369332 315.77664,24.3296927 315.343043,24.6143028 L314.077219,25.4435567 L313.944342,25.3246389 C311.905347,23.5044027 310.318599,21.1855041 309.35505,18.6184637 L309.286669,18.436123 L310.565703,17.5989411 C310.993861,17.3167094 311.172584,16.7902996 311.000077,16.3177993 L309.68219,12.7312362 C309.580396,12.4553468 309.374476,12.2341595 309.102507,12.1073138 C308.827429,11.9812609 308.517383,11.9646124 308.227542,12.0660889 L304.674842,13.3147266 C304.43784,13.405897 303.896232,13.7230113 304.017452,14.7306421 C305.177597,21.7364903 309.399342,27.8956433 315.618898,31.6367995 C315.794512,31.7247987 315.983337,31.7913928 316.149627,31.823897 C316.244428,31.842131 316.335343,31.8524373 316.42315,31.8524373 C316.720763,31.8524373 316.9803,31.74224 317.215748,31.5139177 L319.708543,28.818446 C319.910578,28.6012226 320.013149,28.3213692 319.998385,28.0312096 C319.982844,27.7394645 319.853075,27.4699173 319.630837,27.2717208 L319.630837,27.2717208 Z" id="Fill-1" stroke="none" fill="#CCCCCC" fill-rule="evenodd"></path>
-</svg>
-                </div>
-                
-            </div>
-            
             <div class="popup-fields">     
                 <svg width="8px" height="8px" viewBox="0 7 8 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
@@ -177,7 +222,10 @@
         <path d="M0.564745701,1.7052294 L6.97533793,1.7052294 C7.26079244,1.7052294 7.49432116,1.44206381 7.49432116,1.09783925 C7.49432116,0.75361469 7.26079244,0.490449105 6.97533793,0.490449105 L0.564745701,0.490449105 C0.279291187,0.490449105 0.0457624705,0.75361469 0.0457624705,1.09783925 C0.0457624705,1.44206381 0.279291187,1.7052294 0.564745701,1.7052294" id="Fill-6" fill="#CCCCCC"></path>
     </g>
 </svg>
-<!--                <p>Marketing Executive, Inform Group Pty Ltd, Philippines, Cosmetics Linkedin, Facebook, Twitter  + Add Field</p>-->
+                <div class="popup-fields-text">
+                    <p>Marketing Executive, Inform Group Pty Ltd, Philippines, Cosmetics</p>
+                    <a href="#">LinkedIn</a>
+                </div>
             </div>
             
         </div>
