@@ -2,6 +2,8 @@ body{
     margin: 0;
 }
 
+/*container*/
+
 .container{
     background: url("Layout_1.png") center;
     -webkit-background-size: contain;
@@ -14,6 +16,8 @@ body{
     width: 100%;
 }
 
+/*Tenfold round button*/
+
 .tenfold_btn{
     position: fixed;
     bottom: 72px;
@@ -25,6 +29,7 @@ body{
     border-radius: 100px;
     height: 70px;
     width: 70px;
+    cursor: pointer;
 }
 
 .tenfold_btn svg {
@@ -33,6 +38,9 @@ body{
     text-align: center;
     vertical-align: middle;
 }
+
+
+/*popup background*/
 
 .popup-bg{
     /* popup-bg: */
@@ -69,6 +77,9 @@ body{
     z-index: -1;
 }
 
+
+/*Tenfold logo on the popup*/
+
 .popup-logo{
     position: fixed;
     bottom: 459px;
@@ -76,6 +87,9 @@ body{
     width: 54px;
     height: 10px;
 }
+
+
+/*close button on the popup*/
 
 .popup-close{
     position: fixed;
@@ -86,11 +100,14 @@ body{
     border-color: transparent;
     background-color: transparent;
     padding: 0;
+    cursor: pointer;
 }
 
 .popup-close svg{
     text-align: center;
 }
+
+/*The elements on the first row on the popup*/
 
 #popup-firstrow{
     position: fixed;
@@ -121,7 +138,8 @@ body{
 }
 
 .popup-back p{
-    font-family: TitilliumWeb-Light;
+    font-family: 'Titillium Web';
+    font-weight: 300;
     font-size: 14px;
     color: #666666;
     display: inline-block;
@@ -151,7 +169,7 @@ body{
 }
 
 .popup-call-info-time{
-    font-family: TitilliumWeb-Thin;
+    font-family: 'TitilliumWeb-Thin';
     font-size: 42px;
     color: #666666;
     letter-spacing: -1.75px;
@@ -164,6 +182,7 @@ body{
 .popup-call-info-calls{
     display: inline-block;
     vertical-align: middle;
+    margin-top: 1px;
 }
 
 .popup-call-info-incall{
@@ -176,7 +195,8 @@ body{
 }
 
 .popup-call-info-incall p{
-    font-family: HelveticaNeue-Bold;
+    font-family: 'Helvetica Neue';
+    font-weight: bold;
     font-size: 14px;
     color: #FFFFFF;
     letter-spacing: 0px;
@@ -194,7 +214,8 @@ body{
 }
 
 .popup-call-info-outcall p{
-    font-family: HelveticaNeue-Bold;
+    font-family: 'Helvetica Neue';
+    font-weight: bold;
     font-size: 14px;
     color: #FFFFFF;
     letter-spacing: 0px;
@@ -202,6 +223,9 @@ body{
     vertical-align: middle;
     margin: 0;
 }
+
+
+/*The name and status(the green circle) icon of the person*/
 
 .popup-name-status{
     position: fixed;
@@ -222,12 +246,16 @@ body{
 }
 
 .popup-name p{
-    font-family: TitilliumWeb-Light;
+    font-family: 'Titillium Web';
+    font-weight: 300;
     font-size: 22px;
     color: #666666;
     margin: 0;
     padding: 0;
 }
+
+
+/*The phone number*/
 
 .popup-phone{
     position: fixed;
@@ -236,7 +264,8 @@ body{
 }
 
 .popup-phone a{
-    font-family: TitilliumWeb-Light;
+    font-family: 'Titillium Web';
+    font-weight: 300;
     font-size: 22px;
     color: #00A1E0;
     margin: 0;
@@ -256,6 +285,9 @@ body{
     z-index: 1;
 }
 
+
+/*The "fields"*/
+
 .popup-fields{
     position: fixed;
     bottom: 303px;
@@ -274,7 +306,8 @@ body{
 }
 
 .popup-fields-text p{
-    font-family: TitilliumWeb-Light;
+    font-family: 'Titillium Web';
+    font-weight: 300;
     font-size: 14px;
     color: #666666;
     margin: 0;
@@ -282,7 +315,7 @@ body{
 }
 
 .popup-fields-text a{
-    font-family: Helvetica;
+    font-family: 'Helvetica';
     font-size: 13px;
     font-weight: 300;
     color: #AAAAAA;
@@ -302,6 +335,9 @@ body{
 .popup-fields-icon svg{
     text-align: center;
 }
+
+
+/*The "history": the history group in the Sketch file*/
 
 .popup-history{
     position: fixed;
@@ -366,7 +402,8 @@ body{
 }
 
 .popup-history-log-time p{
-    font-family: TitilliumWeb-Light;
+    font-family: 'Titillium Web';
+    font-weight: 300;
     font-size: 14px;
     color: #666666;
     margin: 0;
@@ -387,7 +424,8 @@ body{
 }
 
 .popup-history-call-history p{
-    font-family: TitilliumWeb-Light;
+    font-family: 'Titillium Web';
+    font-weight: 300;
     font-size: 14px;
     color: #666666;
     margin: 0;
@@ -432,7 +470,8 @@ body{
 }
 
 .popup-history-dispositions-followup-text a{
-    font-family: TitilliumWeb-Light;
+    font-family: 'Titillium Web';
+    font-weight: 300;
     font-size: 14px;
     color: #00A1E0;
     margin: 0;
@@ -458,12 +497,16 @@ body{
 }
 
 .popup-history-dispositions-notes-text a{
-    font-family: TitilliumWeb-Light;
+    font-family: 'Titillium Web';
+    font-weight: 300;
     font-size: 14px;
     color: #00A1E0;
     margin: 0;
     padding: 0;
 }
+
+
+/*The "show more"*/
 
 .popup-show-more{
     position: fixed;
@@ -486,6 +529,9 @@ body{
     text-align: center;
 }
 
+
+/*The notes at the bottom*/
+
 .popup-notes{
     position: fixed;
     bottom: 94px;
@@ -506,7 +552,8 @@ body{
 }
 
 .popup-notes-text p{
-    font-family: TitilliumWeb-Light;
+    font-family: 'Titillium Web';
+    font-weight: 300;
     font-size: 14px;
     color: #666666;
     line-height: 22px;
@@ -515,13 +562,17 @@ body{
 }
 
 .popup-notes-text a{
-    font-family: TitilliumWeb-Light;
+    font-family: 'Titillium Web';
+    font-weight: 300;
     font-size: 14px;
     color: #00A1E0;
     line-height: 22px;
     margin: 0;
     padding: 0;
 }
+
+
+/*The save button beside the notes at the bottom*/
 
 .popup-notes-save{
     position: fixed;
@@ -533,6 +584,7 @@ body{
     border-radius: 4px;
     border-color: transparent;
     vertical-align: middle;
+    cursor: pointer;
 }
 
 .popup-notes-save p{
