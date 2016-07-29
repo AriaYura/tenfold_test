@@ -3,16 +3,16 @@ body{
 }
 
 .container{
-        background: url("Layout_1.png") center;
-        -webkit-background-size: contain;
-        -moz-background-size: contain;
-        -o-background-size: contain;
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: top;
-        height: 1000px;
-        width: 100%;
-    }
+    background: url("Layout_1.png") center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 1000px;
+    width: 100%;
+}
 
 .tenfold_btn{
     position: fixed;
@@ -48,4 +48,277 @@ body{
     bottom: 69px;
     right: 56px;
 }
+
+.popup-bg-top{
+    position: fixed;
+    bottom: 347px;
+    right: 28px;
+    background: #F9F9F9;
+    width: 634px;
+    height: 141px;
+}
+
+.popup-bg-bottom{
+    position: fixed;
+    bottom: 62px;
+    right: 56.4px;
+    background: #EBEFF2;
+    width: 598.6px;
+    height: 127px;
+}
+
+.popup-logo{
+    position: fixed;
+    bottom: 459px;
+    right: 589px;
+    width: 54px;
+    height: 10px;
+}
+
+.popup-back{
+    position: fixed;
+    bottom:407px;
+    right: 479px;
+    width: 143px;
+    height: 39px;
+}
+
+.popup-back-icon{
+    position: fixed;
+    bottom: 407.13px;
+    right: 583.13px;
+    width: 38.87px;
+    height: 38.87px;
+}
+
+.popup-back-icon svg{
+    text-align: center;
+}
+
+.popup-back p{
+    font-family: TitilliumWeb-Light;
+    font-size: 14px;
+    color: #666666;
+}
+
+
+.popup-call-info{
+    position: fixed;
+    bottom: 405px;
+    right: 86px;
+    width: 332px;
+    height: 43px;
+}
+
+.popup-call-info-phone-icon{
+    position: fixed;
+    bottom: 407.13px;
+    right: 86.13px;
+    width: 38.87px;
+    height: 38.87px;
+}
+
+.popup-call-info-phone-icon svg{
+    text-align: center;
+}
+
+.popup-call-info-time{
+    position: fixed;
+    bottom: 414px;
+    right: 136px;
+    font-family: TitilliumWeb-Thin;
+    font-size: 42px;
+    color: #666666;
+    letter-spacing: -1.75px;
+    line-height: 32px;
+    text-align: right;
+}
+
+.popup-call-info-incall{
+    position: fixed;
+    bottom: 428px;
+    right: 292px;
+    width: 59px;
+    height: 20px;
+    background: #00D95A;
+    border-radius: 4px;
+}
+
+.popup-call-info-outcall{
+    position: fixed;
+    bottom: 405px;
+    right: 291px;
+    width: 127px;
+    height: 20px;
+    background: #CCCCCC;
+    border-radius: 4px;
+}
+
+.popup-phone{
+    font-family: TitilliumWeb-Light;
+    font-size: 22px;
+    color: #00A1E0;
+}
+
+.popup-name{
+    font-family: TitilliumWeb-Light;
+    font-size: 22px;
+    color: #666666;
+}
+
+.popup-photo{
+    position: fixed;
+    bottom: 300px;
+    right: 527px;
+    width:89px;
+    height: 89px;
+    border: 1px solid #CCCCCC;
+    border-radius: 100px;
+    background: #FFFFFF;
+    z-index: 1;
+}
+
+.popup-fields{
+    position: fixed;
+    bottom: 303px;
+    right: 86px;
+    width: 418px;
+    height: 37px;
+}
+
+.popup-fields-icon{
+    position: fixed;
+    bottom: 325px;
+    right: 496px;
+    width: 8px;
+    height: 8px;
+}
+
+.popup-fields-icon svg{
+    text-align: center;
+}
+
+.popup-fields p{
+    font-family: TitilliumWeb-Light;
+    font-size: 14px;
+    color: #666666;
+}
+
+.popup-history{
+    position: fixed;
+    bottom: 213px;
+    right: 90px;
+    width: 513px;
+    height: 103px;
+}
+
+.popup-history-icon{
+    position: fixed;
+    bottom: 213px;
+    right: 541px;
+    width: 62px;
+    height: 103px;
+}
+
+.popup-history-icon svg{
+    text-align: center;
+}
+
+.popup-history-log{
+    position: fixed;
+    bottom: 223px;
+    right: 394px;
+    width: 127px;
+    height: 44px;
+}
+
+.popup-history-log-calltype{
+    position: fixed;
+    bottom: 247px;
+    right: 394px;
+    width: 127px;
+    height: 20px;
+    background: #CCCCCC;
+    border-radius: 4px;
+}
+
+.popup-history-log-timeicon{
+    position: fixed;
+    bottom: 226.1px;
+    right: 505.1px;
+    width: 14.9px;
+    height: 14.9px
+}
+
+.popup-history-log-timeicon svg{
+    text-align: center;
+}
+
+.popup-history-call-history{
+    position: fixed;
+    bottom: 277px;
+    right: 90px;
+    width: 108px;
+    height: 21px;
+}
+
+.popup-history-call-history-icon{
+    position: fixed;
+    bottom: 284px;
+    right: 90px;
+    width: 9px;
+    height: 6px;
+}
+
+.popup-history-call-history-icon svg{
+    text-align: center;
+}
+
+.popup-history-dispositions{
+    position: fixed;
+    bottom: 225px;
+    right: 91px;
+    width: 139px;
+    height: 40px;
+}
+
+.popup-history-dispositions-followup{
+    position: fixed;
+    bottom: 247px;
+    right: 184px;
+    width: 18px;
+    height: 18px;
+}
+
+.popup-history-dispositions-followup svg{
+    text-align: center;
+}
+
+.popup-history-dispositions-notes{
+    position: fixed;
+    bottom: 245px;
+    right: 103px;
+    width: 19px;
+    height: 20px;
+}
+
+.popup-history-dispositions-notes svg{
+    text-align: center;
+}
+
+.popup-history-text{
+    font-family: TitilliumWeb-Light;
+    font-size: 14px;
+    color: #666666;
+}
+
+
+
+.popup-fields-link{
+    font-family: Helvetica-Regular;
+    font-size: 13px;
+    color:#AAAAAA;
+}
+
+
 
